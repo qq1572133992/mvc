@@ -1,7 +1,7 @@
 <?php
 
 /* layouts.html */
-class __TwigTemplate_383dfffdba63e0c672ecadc39a0525f0bf7898e037cc0b8a3b0622ecb5793209 extends Twig_Template
+class __TwigTemplate_80aaa7a83b78d6f78c15834b61de472274f719fd99a1d19c75bb6cf9fe63c58e extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -77,6 +77,6 @@ class __TwigTemplate_383dfffdba63e0c672ecadc39a0525f0bf7898e037cc0b8a3b0622ecb57
 \t</content>
 \t<footer>footer</footer>
 </body>
-</html>", "layouts.html", "D:\\mvc\\app\\views\\layouts.html");
+</html>", "layouts.html", "/var/www/mvc/app/views/layouts.html");
     }
 }

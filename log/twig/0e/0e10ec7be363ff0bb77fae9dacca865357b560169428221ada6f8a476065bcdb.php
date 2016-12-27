@@ -1,7 +1,7 @@
 <?php
 
 /* index.html */
-class __TwigTemplate_a3c9acfdb19083610961f9f9063d6c8678596cc043e545357e8fdfaaa393eccb extends Twig_Template
+class __TwigTemplate_de0fea695f5498619fa30a094bb7feefcc3511644db60637b4751d9705085482 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
     {
@@ -69,6 +69,6 @@ class __TwigTemplate_a3c9acfdb19083610961f9f9063d6c8678596cc043e545357e8fdfaaa39
 \t{{data}}
 \t{{title}}
 {% endblock %}
-", "index.html", "D:\\mvc\\app\\views\\index.html");
+", "index.html", "/var/www/mvc/app/views/index.html");
     }
 }

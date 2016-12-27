@@ -1,7 +1,7 @@
 <?php  
 return array(
-	'DRIVE'=>'file',
-	'OPTION' => array(
-		'PATH' => MVC.'/log/'
+	'drive'=>'file',
+	'option' => array(
+		'path' => MVC.'/log/'
 	)
 );

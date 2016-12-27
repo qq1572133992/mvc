@@ -4,18 +4,21 @@ namespace core;
 
 class mvc
 {  
-	//ä¸´æ—¶å˜é‡
+	//ÁÙÊ±±äÁ¿
 	public static $classMap = array();
 	public $assign;
 	public $display;
 	static public function run()
 	{
+		date_default_timezone_set('PRC');
 		\core\lib\log::init();
 		// \core\lib\log::log($_SERVER,'server');
 
 		$route = new \core\lib\route();
 		$controller = $route->ctrl;
 		$action = $route->action;
+// 		var_dump($action);
+// var_dump($controller);die;
 		$ctrlFile = APP.'/controller/'.$controller.'Controller.php';
 		$ctrlClass = '\\'.MODULE.'\controller\\'.$controller.'Controller';
 		if (is_file($ctrlFile)) {
@@ -24,13 +27,13 @@ class mvc
 			$ctrl->$action();
 			\core\lib\log::log('controller:'.$controller.'     action:'.$action);
 		} else {
-			throw new \Exception("æ‰¾ä¸åˆ°æ¬¡æ§åˆ¶å™¨".$controller);
+			throw new \Exception("ÕÒ²»µ½´Î¿ØÖÆÆ÷".$controller);
 			
 		}
 
 	}
 	static public function load($class){
-		//è‡ªåŠ¨åŠ è½½ç±»
+		//×Ô¶¯¼ÓÔØÀà
 		//new core\route();
 		//$class = '\core\route';
 		//MVC.'/core/route.php';
@@ -51,8 +54,8 @@ class mvc
 	
 	/**
 	 * [assign description]
-	 * @param  [type] $name  [å˜é‡å]
-	 * @param  [type] $value [å˜é‡å€¼]
+	 * @param  [type] $name  [±äÁ¿Ãû]
+	 * @param  [type] $value [±äÁ¿Öµ]
 	 */
 	public 	function assign($name,$value){
 		$this->assign[$name] = $value;
@@ -60,7 +63,7 @@ class mvc
 
 	/**
 	 * [display description]
-	 * @param  [type] $file [æ–‡ä»¶å]
+	 * @param  [type] $file [ÎÄ¼şÃû]
 	 */
 	public function display($file){
 		$name = $file;

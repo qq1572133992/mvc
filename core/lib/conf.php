@@ -4,7 +4,8 @@ header('content-type:text/html;charset=utf-8');
 class conf { 
 	static $conf = array();//将配置文件放入$conf
 	static public function get($name,$file){
-		$file = MVC.'\core\config\\'.$file.'.php';
+		$file = MVC.'/core/config/'.$file.'.php';
+		// var_dump($file);die;
 			// var_dump(self::$conf);
 		if (isset(self::$conf[$file])) {
 			return self::$conf[$file][$name];	
@@ -28,7 +29,7 @@ class conf {
 		if(isset(self::$conf[$file])){
 			return self::$conf[$file];
 		} else {
-			$path = MVC.'\core\config\\'.$file.'.php';
+			$path = MVC.'/core/config/'.$file.'.php';
 			// var_dump($path);
 			if (is_file($path)) {
 				//如果存在 将配置放入config
