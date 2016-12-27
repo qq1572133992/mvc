@@ -2,10 +2,11 @@
 namespace core\lib\drive\log;
 use core\lib\conf;
 class file {
+	 
 	public $path; #日志存储位置   是一个路径。
 	public function __construct(){
-		 $conf = conf::get('OPTION','log');
-		 $this->path = $conf['PATH'];
+		 $conf = conf::get('option','log');
+		 $this->path = $conf['path'];
 	}
 	public function log($message,$file = 'log'){
 		/**
@@ -21,7 +22,9 @@ class file {
 		if(!is_dir($this->path.date('YmdH'))){
 			mkdir($this->path.date('YmdH'),'0777',true);			
 		}
-		return file_put_contents($this->path.date('YmdH').'/'.$file.'.php',date('Y-m-d H:i:s').json_encode($message).PHP_EOL,FILE_APPEND);
+		$files = $this->path.date('YmdH').'/'.$file.'.php';
+		$type = date('Y-m-d H:i:s').json_encode($message).PHP_EOL;
+		return file_put_contents($files,$type,FILE_APPEND);
 	}
 }
 

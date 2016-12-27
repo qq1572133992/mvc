@@ -11,9 +11,9 @@ class log {
 	static $class;
 	static public function init(){
 		//确定储存方式
-		$drive = conf::get('DRIVE','log');
+		$drive = conf::get('drive','log');
 		$class = '\core\lib\drive\log\\'.$drive;
-
+		// var_dump($class);die;
 		self::$class = new $class;
 	}
 	static public function log($name,$file = 'log'){

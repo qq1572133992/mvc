@@ -1,24 +1,24 @@
 <?php
 /**
- * å…¥å£æ–‡ä»¶
- * 1.å®šä¹‰å¸¸é‡
- * 2.åŠ è½½å‡½æ•°åº“
- * 3.å¯åŠ¨æ¡†æž¶
+ * Èë¿ÚÎÄ¼þ
+ * 1.¶¨Òå³£Á¿
+ * 2.¼ÓÔØº¯Êý¿â
+ * 3.Æô¶¯¿ò¼Ü
  */
 // echo '123' ;die;
-define('MVC', realpath('./'));//å½“å‰æ¡†æž¶æ‰€åœ¨ç›®å½•
-define('CORE',MVC.'/core');//é¡¹ç›®ä¸­çš„å‡½æ•°åº“
-define('APP',MVC.'/app'); //é¡¹ç›®æ–‡ä»¶æ‰€åœ¨ç›®å½•
-define('MODULE','app'); //æŽ§åˆ¶å™¨
+define('MVC', realpath('./'));//µ±Ç°¿ò¼ÜËùÔÚÄ¿Â¼
+define('CORE',MVC.'/core');//ÏîÄ¿ÖÐµÄº¯Êý¿â
+define('APP',MVC.'/app'); //ÏîÄ¿ÎÄ¼þËùÔÚÄ¿Â¼
+define('MODULE','app'); //¿ØÖÆÆ÷
 
 define('DEBUG',true);
- // var_dump(APP);die;
+// var_dump(APP);die;
 // var_dump(MODULE);die;
 include "vendor/autoload.php";
 
 if(DEBUG) {
 	$whoops = new \Whoops\Run;
-	$errorTitle = 'æ¡†æž¶å‡ºé”™äº†';
+	$errorTitle = '¿ò¼Ü³ö´íÁË';
 	$option = new \Whoops\Handler\PrettyPageHandler();
 	$option->setPageTitle($errorTitle);
 	$whoops->pushHandler($option);
@@ -31,7 +31,7 @@ if(DEBUG) {
 include CORE.'/common/function.php';
 include CORE.'/mvc.php';
 
-spl_autoload_register('\core\mvc::load');//å½“æ²¡æœ‰è¿™ä¸ªç±»è‡ªåŠ¨æ‰§è¡Œ
+spl_autoload_register('\core\mvc::load');//µ±Ã»ÓÐÕâ¸öÀà×Ô¶¯Ö´ÐÐ
 \core\mvc::run();  
 
 
