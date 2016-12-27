@@ -1,0 +1,21 @@
+{
+	"name":"MVC PHP",
+	"description":"PHP Fromework",
+	"type":"Fromework",
+	"keywords": [
+		"PHP","PHP Fromework"
+	],
+	"require": {
+		"php":">= 5.3.0",
+		"filp/whoops":"*",
+		"symfony/var-dumper":"*",
+		"catfan/medoo":"*",
+		"twig/twig":"*"
+	},
+	"repositories": {
+		"packagist": {
+			"type": "composer",
+			"url": "https://packagist.phpcomposer.com"
+		}
+	}
+}
